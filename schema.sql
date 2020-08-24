@@ -72,6 +72,13 @@ CREATE TABLE IF NOT EXISTS salaries
     PRIMARY KEY(primary_key)
 );
 
+CREATE TABLE IF NOT EXISTS emp_title
+(
+    title_id VARCHAR(30) NOT NULL,
+    emp_id INTEGER NOT NULL,
+    PRIMARY KEY(title_id, emp_id)
+);
+
 
 -- Create FKs
 ALTER TABLE departments
@@ -92,12 +99,6 @@ ALTER TABLE employees
     MATCH SIMPLE
 ;
     
-ALTER TABLE titles
-    ADD    FOREIGN KEY (title_id)
-    REFERENCES employees(emp_title_id)
-    MATCH SIMPLE
-;
-    
 ALTER TABLE salaries
     ADD    FOREIGN KEY (emp_no)
     REFERENCES employees(emp_no)
@@ -107,6 +108,18 @@ ALTER TABLE salaries
 ALTER TABLE dept_manager
     ADD    FOREIGN KEY (emp_no)
     REFERENCES employees(emp_no)
+    MATCH SIMPLE
+;
+    
+ALTER TABLE emp_title
+    ADD    FOREIGN KEY (emp_id)
+    REFERENCES employees(emp_no)
+    MATCH SIMPLE
+;
+    
+ALTER TABLE emp_title
+    ADD    FOREIGN KEY (title_id)
+    REFERENCES titles(title_id)
     MATCH SIMPLE
 ;
     
