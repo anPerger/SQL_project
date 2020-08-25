@@ -8,12 +8,12 @@ spent a long time drawing and redrawing relations between tables to
 make sure everything was logically consistent and will actually be
 queryable. CSVs were loaded in:
 
-departments
-titles
-salaries
-employees
-dept_emp
-dept_manager
+1 ) departments
+2 ) titles
+3 ) salaries
+4 ) employees
+5 ) dept_emp
+6 ) dept_manager
 
 After finally getting the schema from my ERD to run correctly and loading 
 in my CSVs I was able to begin querying using JOINS. The majority of the 
