@@ -1,6 +1,6 @@
 # SQL_project
 
-# Schema
+# ERD
 ![ERD](https://github.com/anPerger/SQL_project/blob/master/my_ERD.png)
 
 First part of this project consisted of exploring the data to
