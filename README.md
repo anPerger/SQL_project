@@ -24,3 +24,5 @@ queries were quite simple with INNER JOINs on whatever tables contained
 the necessary information. Apparently there's a limit of 64 JOINs that are
 possible with a single statement, but I have a hard time imagining when 
 that will become a legitimate concern
+
+Additional bonus analysis was conducted in the jupyter notebook using sqlAlchemy
